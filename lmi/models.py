@@ -301,7 +301,7 @@ class AEInfoNCE(nn.Module):
         T0 = self.F_func(torch.cat([x_samples,y_samples], dim = -1))
         T1 = self.F_func(torch.cat([x_tile, y_tile], dim = -1))  #[sample_size, sample_size, 1]
 
-        lower_bound = T0.mean() - (T1.logsumexp(dim = 1).mean() - np.log(sample_size)) 
+        lower_bound = T0.mean() - (T1.logsumexp(dim = 1).mean() - torch.log(sample_size)) 
         return -lower_bound
     
     def decode(self, Zx, Zy):
