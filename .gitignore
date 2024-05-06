@@ -1,3 +1,8 @@
+# ProtT5 embeddings
+
+data/ProtT5_embeddings/*
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

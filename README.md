@@ -1,6 +1,6 @@
 # Approximating mutual information of high-dimensional variables using learned representations
 
-This repository provides code to reproduce results from **Approximating mutual information of high-dimensional variables using learned representations**, G. Gowri, XK. Lun, A. Klein, and P. Yin, 2024.
+This repository provides code to reproduce results from **Approximating mutual information of high-dimensional variables using learned representations.**
 
 ## Requirements
 
