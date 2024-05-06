@@ -8,9 +8,9 @@ This repository provides code to reproduce results from **Approximating mutual i
 **TODO** Add scanpy and pandas as requirements for preprocessing. And BMI library. And potentially everything else that gets imported in the jupyter notebooks.
 
 To install requirements:
-
+```
 pip install -r requirements.txt
-
+```
 Some datasets (to reproduce hematopoiesis and pLM results) must be downloaded separately. Instructions below:
 
 1. **Downloading protein embeddings from UniProt.** Download [A. thaliana](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/embeddings/UP000006548_3702/per-protein.h5) PT5 mean-pooled embeddings and [E. coli](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/embeddings/UP000000625_83333/per-protein.h5) PT5 mean-pooled embeddings using the UniProt links. Save them as `data/ProtT5_embeddings/athaliana_embeddings.h5` and `data/ProtT5_embeddings/ecoli_embeddings.h5` respectively.
