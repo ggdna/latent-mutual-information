@@ -1,7 +1,9 @@
 # ProtT5 embeddings
 
-data/ProtT5_embeddings/*
-
+data/*.h5ad
+data/ltseq/*.mtx
+data/ProtT5_embeddings/*.h5
+data/ProtT5_embeddings/*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
