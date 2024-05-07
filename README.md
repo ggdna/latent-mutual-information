@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ```
 Some datasets (to reproduce hematopoiesis and pLM results) must be downloaded separately. Instructions below:
 
-1. **Downloading protein embeddings from UniProt.** Download [A. thaliana](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/embeddings/UP000006548_3702/per-protein.h5) PT5 mean-pooled embeddings and [E. coli](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/embeddings/UP000000625_83333/per-protein.h5) PT5 mean-pooled embeddings using the UniProt links. Save them as `data/ProtT5_embeddings/athaliana_embeddings.h5` and `data/ProtT5_embeddings/ecoli_embeddings.h5` respectively.
+1. **Downloading protein embeddings from UniProt.** Download [A. thaliana](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/embeddings/UP000006548_3702/per-protein.h5), [H. sapiens](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/embeddings/UP000005640_9606/per-protein.h5) and [E. coli](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/embeddings/UP000000625_83333/per-protein.h5) PT5 mean-pooled embeddings using the UniProt links. Save them as `data/ProtT5_embeddings/athaliana_embeddings.h5`, `data/ProtT5_embeddings/hsapiens_embeddings.h5` and `data/ProtT5_embeddings/ecoli_embeddings.h5` respectively.
 
 2. **Downloading hematopoiesis LT-Seq data.** Download all files from Experiment 1 from the [Weinreb et al., 2020 data repository](https://github.com/AllonKleinLab/paper-data/tree/master/Lineage_tracing_on_transcriptional_landscapes_links_state_to_fate_during_differentiation). Save them in `data/ltseq/`.
 
