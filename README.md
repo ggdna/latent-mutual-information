@@ -28,10 +28,12 @@ The results from the paper can be reproduced by running Jupyter notebooks in the
 | Figure/table | Result description | Filename | Notes |
 |--------------|--------------------|----------|-------|
 | Figure 2     | Dimensionality scaling, multivariate Gaussians | `B_Gaussian_grid.ipynb` | |
+| Figure 4 | Benchmarking by resampling (MNIST) | `B_MNIST.ipynb` | |
+|Figure 4 | Benchmarking by resampling (PT5) | `B_species_mixing.ipynb`| |
 
 ## Visualizing results
 
-Results from the `analysis` notebooks are saved as `.csv` in the `results/` folder. These are then "pretty-plotted" in Jupyter notebooks, with names ending in `*_plots.ipynb`. For arranging as figures in the paper, we sometimes have notebooks called `*_arrangement.ipynb`.
+Results from the `analysis` notebooks are saved as `.csv` in the `results/` folder. These are then "pretty-plotted" in Jupyter notebooks with names ending in `*_plots.ipynb`. For arranging as figures in the paper, we sometimes have notebooks called `*_arrangement.ipynb`.
 
 ## Acknowledgements
 

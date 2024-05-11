@@ -14,8 +14,9 @@ class AECross(nn.Module):
         super(AECross, self).__init__()
         
         # choosing hidden layer sizes
-        Lx = int(2**np.floor(np.log2(x_dim)))
-        Ly = int(2**np.floor(np.log2(y_dim)))
+        # Lx = int(2**np.floor(np.log2(x_dim)))
+        # Ly = int(2**np.floor(np.log2(y_dim)))
+        Lx, Ly = 1024, 1024
         
         self.x_encoder = nn.Sequential(nn.Linear(x_dim, Lx),
                                       nn.LeakyReLU(negative_slope=0.2),
@@ -53,22 +54,30 @@ class AECross(nn.Module):
                                       nn.Linear(Ly, y_dim),)
                                     #   nn.LeakyReLU(negative_slope=0.2))
         
-        self.yx_decoder = nn.Sequential(nn.Linear(latent_size, Lx//4),
-                                      nn.LeakyReLU(negative_slope=0.2),
-                                      nn.Linear(Lx//4, Lx//2),
-                                      nn.LeakyReLU(negative_slope=0.2),
-                                      nn.Linear(Lx//2, Lx),
-                                      nn.LeakyReLU(negative_slope=0.2),
-                                      nn.Linear(Lx, x_dim),)
+        self.yx_decoder = nn.Sequential(nn.Dropout(p=0.5),
+                                        nn.Linear(latent_size, Lx//4),
+                                        nn.LeakyReLU(negative_slope=0.2),
+                                        nn.Dropout(p=0.5),
+                                        nn.Linear(Lx//4, Lx//2),
+                                        nn.LeakyReLU(negative_slope=0.2),
+                                        nn.Dropout(p=0.5),
+                                        nn.Linear(Lx//2, Lx),
+                                        nn.LeakyReLU(negative_slope=0.2),
+                                        nn.Dropout(p=0.5),
+                                        nn.Linear(Lx, x_dim),)
                                     #   nn.LeakyReLU(negative_slope=0.2))
         
-        self.xy_decoder = nn.Sequential(nn.Linear(latent_size, Ly//4),
-                                      nn.LeakyReLU(negative_slope=0.2),
-                                      nn.Linear(Ly//4, Ly//2),
-                                      nn.LeakyReLU(negative_slope=0.2),
-                                      nn.Linear(Ly//2, Ly),
-                                      nn.LeakyReLU(negative_slope=0.2),
-                                      nn.Linear(Ly, y_dim),)
+        self.xy_decoder = nn.Sequential(nn.Dropout(p=0.5),
+                                        nn.Linear(latent_size, Ly//4),
+                                        nn.LeakyReLU(negative_slope=0.2),
+                                        nn.Dropout(p=0.5),
+                                        nn.Linear(Ly//4, Ly//2),
+                                        nn.LeakyReLU(negative_slope=0.2),
+                                        nn.Dropout(p=0.5),
+                                        nn.Linear(Ly//2, Ly),
+                                        nn.LeakyReLU(negative_slope=0.2),
+                                        nn.Dropout(p=0.5),
+                                        nn.Linear(Ly, y_dim),)
                                     #   nn.LeakyReLU(negative_slope=0.2))
 
         self.alpha = alpha
@@ -126,8 +135,9 @@ class AEMINE(nn.Module):
         super(AEMINE, self).__init__()
         
         # choosing hidden layer sizes
-        Lx = int(2**np.floor(np.log2(x_dim)))
-        Ly = int(2**np.floor(np.log2(y_dim)))
+        # Lx = int(2**np.floor(np.log2(x_dim)))
+        # Ly = int(2**np.floor(np.log2(y_dim)))
+        Lx, Ly = 1024, 1024
         
         self.x_encoder = nn.Sequential(nn.Linear(x_dim, Lx),
                                       nn.LeakyReLU(negative_slope=0.2),
@@ -230,8 +240,9 @@ class AEInfoNCE(nn.Module):
         super(AEInfoNCE, self).__init__()
         
         # choosing hidden layer sizes
-        Lx = int(2**np.floor(np.log2(x_dim)))
-        Ly = int(2**np.floor(np.log2(y_dim)))
+        # Lx = int(2**np.floor(np.log2(x_dim)))
+        # Ly = int(2**np.floor(np.log2(y_dim)))
+        Lx, Ly = 1024, 1024
         
         self.x_encoder = nn.Sequential(nn.Linear(x_dim, Lx),
                                       nn.LeakyReLU(negative_slope=0.2),
