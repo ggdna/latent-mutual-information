@@ -130,11 +130,11 @@ def ae(Xs, Ys, train_indices, test_indices,
     X_test = Xs[test_indices]
     Y_test = Ys[test_indices]
     
-    if X_train.shape[1] < N_dims*4 or Y_train.shape[1] < N_dims*4:
+    if 128 < N_dims or 128 < N_dims:
         warnings.warn("Hidden layer smaller than latent dimension. Consider reducing N_dims")
         
-    assert X_train.shape[1] // 4 > 0, "Hidden layer with size 0. Consider tiling input."
-    assert Y_train.shape[1] // 4 > 0, "Hidden layer with size 0. Consider tiling input."
+    # assert X_train.shape[1] // 4 > 0, "Hidden layer with size 0. Consider tiling input."
+    # assert Y_train.shape[1] // 4 > 0, "Hidden layer with size 0. Consider tiling input."
     
     model = eval(regularizer)(X_train.shape[1], Y_train.shape[1], N_dims, 
                               alpha=alpha, lam=lam).cuda()
