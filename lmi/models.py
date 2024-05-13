@@ -16,8 +16,14 @@ class AECross(nn.Module):
         # choosing hidden layer sizes
         # Lx = int(2**np.floor(np.log2(x_dim)))
         # Ly = int(2**np.floor(np.log2(y_dim)))
+        
         Lx, Ly = 1024, 1024
         
+        if x_dim > 2048:
+            Lx = int(2**np.floor(np.log2(x_dim)))
+        if y_dim > 2048:
+            Ly = int(2**np.floor(np.log2(y_dim)))
+
         self.x_encoder = nn.Sequential(nn.Linear(x_dim, Lx),
                                       nn.LeakyReLU(negative_slope=0.2),
                                       nn.Linear(Lx, Lx//2),
