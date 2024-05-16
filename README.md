@@ -6,9 +6,6 @@ This repository provides code to reproduce results from **Approximating mutual i
 
 ## Requirements
 
-
-**TODO** Add scanpy and pandas as requirements for preprocessing. And BMI library. And potentially everything else that gets imported in the jupyter notebooks.
-
 To install requirements:
 ```
 pip install -r requirements.txt
