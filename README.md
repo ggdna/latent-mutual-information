@@ -22,14 +22,14 @@ To preprocess pLM data and hematopoiesis data, run the `data/*_preprocessing.ipy
 
 ## Results
 
-The results from the paper can be reproduced by running Jupyter notebooks in the `analysis/` folder. Below, we indicate which notebooks correspond to which result.
+The results from the paper can be reproduced by running Jupyter notebooks in the `analysis/` folder. The next table links specific results to notebooks.
 
 | Figure/table | Result description | Filename | Notes |
 |--------------|--------------------|----------|-------|
 | Figure 2     | Dimensionality scaling, multivariate Gaussians | `B_Gaussian_grid.ipynb` | includes alternate regularizers |
 | Figure 3 | Convergence rates | `B_Gaussian_sample_complexity.ipynb`| |
-| Figure 4 | Benchmarking by resampling (MNIST) | `B_MNIST.ipynb` | |
-|Figure 4 | Benchmarking by resampling (PT5) | `B_species_mixing.ipynb`| |
+| Figure 4 | Benchmarking by resampling (MNIST) | `B_MNIST.ipynb` | includes alternate regularizers |
+|Figure 4 | Benchmarking by resampling (PT5) | `B_species_mixing.ipynb`| includes alternate regularizers |
 | Figure 5 | Ligand-Receptor MI| `OP_LR_shuffle_test.ipynb`| |
 | Figure 5 | Kinase-target MI| `OP_kinase_shuffle_test.ipynb`| |
 | Figure 5 | Ligand-Receptor prediction| `OP_LR_classification.ipynb`| |
@@ -40,6 +40,8 @@ The results from the paper can be reproduced by running Jupyter notebooks in the
 | Appendix | Validating ProtTrans5 assumptions | `V_PT5_assumptions.ipynb` | |
 | Appendix | Comparing latent estimators | `A_comparing_latent_estimators.ipynb` | |
 | Appendix | Interpreting MI by dissecting decoders | `A_decoder_inspection.ipynb` | |
+| Appendix | Optimizing critic architectures | `A_critic_architectures.ipynb` | |
+| Appendix | MNIST benchmarking with big critics | `A_big_critic_MNIST.ipynb` | |
 
 
 
