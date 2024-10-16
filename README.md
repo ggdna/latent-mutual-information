@@ -1,8 +1,8 @@
 # Approximating mutual information of high-dimensional variables using learned representations
 
-This repository provides code to reproduce results from **Approximating mutual information of high-dimensional variables using learned representations.**
+This repository provides code to reproduce results from [*Approximating mutual information of high-dimensional variables using learned representations*](https://arxiv.org/abs/2409.02732), NeurIPS 2024 (spotlight).
 
-*author list redacted for peer review*
+We built a python package implementing the latent mutual information approximation, which we introduce in the paper. It is easily installable by pip. You can find the code [here](https://github.com/ggdna/latentmi) and the documentation [here](https://latentmi.readthedocs.io/en/latest/).
 
 ## Requirements
 
@@ -48,7 +48,3 @@ The results from the paper can be reproduced by running Jupyter notebooks in the
 ## Visualizing results
 
 Results from the `analysis` notebooks are saved as `.csv` in the `results/` folder. These are then "pretty-plotted" in Jupyter notebooks with names ending in `*_plots.ipynb` or `*_arrangement.ipynb` for organizing the more complicated figures in the paper.
-
-## Acknowledgements
-
-*redacted for peer review*
